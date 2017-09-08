@@ -1,0 +1,28 @@
+package elementdel;
+import java.util.Scanner;
+
+public class Elementdel {
+
+    public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+int array[]=new int[15];
+int position,c,n;
+        System.out.println("enter the number of elements :");
+    n=sc.nextInt();
+        System.out.println("Enter"+n+"Element :");
+        for (c=0;c<n;c++)
+        array[c]=sc.nextInt();
+        System.out.println("enter the location from where you wish to delete :");
+        position=sc.nextInt();
+        if(position>=n+1)
+            System.out.println("deletion not possible .");
+        else
+        {
+            for(c=position-1;c<n-1;c++)
+                array[c]=array[c+1];
+            System.out.println("resultant array is:");
+            for(c=0;c<n-1;c++)
+                System.out.println(array[c]);
+        }
+    }
+}
